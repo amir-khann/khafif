@@ -20,24 +20,40 @@ export default function HeroSection() {
               {t('orderUsingApp')}
             </p>
             
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
+              {/* App Store Badge */}
               <a
-                href="#"
-                className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-smooth transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="https://apps.apple.com/app/khafif/idYOUR_APP_ID"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-smooth transform hover:scale-105"
+                aria-label="Download on the App Store"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.42-.5-3.84-.5-1.42 0-2.75 0-3.84.5-1.03.48-2.1.55-3.08-.4C1.79 19.25 1 16.21 1 12c0-4.21.79-7.25 1.37-8.28.98-.95 2.05-.88 3.08-.4C6.55 3.82 7.88 3.82 9.3 3.82c1.42 0 2.75 0 3.84-.5 1.03-.48 2.1-.55 3.08.4C17.21 4.75 18 7.79 18 12c0 4.21-.79 7.25-1.37 8.28zM10.5 6.75v10.5l6-5.25-6-5.25z"/>
-                </svg>
-                <span>iOS</span>
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
+                  alt="Download on the App Store"
+                  className="h-14 w-auto dark:hidden"
+                />
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
+                  alt="Download on the App Store"
+                  className="h-14 w-auto hidden dark:block"
+                />
               </a>
+              
+              {/* Google Play Badge */}
               <a
-                href="#"
-                className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-smooth transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-smooth transform hover:scale-105"
+                aria-label="Get it on Google Play"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                </svg>
-                <span>Android</span>
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="h-14 w-auto"
+                />
               </a>
             </div>
           </div>
