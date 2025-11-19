@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
 type Language = 'en' | 'ar'
 
@@ -138,11 +138,30 @@ const translations: Record<Language, Record<string, string>> = {
 const TranslationContext = createContext<TranslationContextType | undefined>(undefined)
 
 export function TranslationProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en')
+  const [language, setLanguage] = useState<Language>('ar')
+
+  useEffect(() => {
+    // Check for saved language preference or default to Arabic
+    const savedLanguage = localStorage.getItem('language') as Language | null
+    if (savedLanguage) {
+      setLanguage(savedLanguage)
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = savedLanguage
+        document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr'
+      }
+    } else {
+      // Set default to Arabic if no saved preference
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = 'ar'
+        document.documentElement.dir = 'rtl'
+      }
+    }
+  }, [])
 
   const toggleLanguage = () => {
     const newLang = language === 'en' ? 'ar' : 'en'
     setLanguage(newLang)
+    localStorage.setItem('language', newLang)
     if (typeof document !== 'undefined') {
       document.documentElement.lang = newLang
       document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr'
