@@ -28,18 +28,19 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
                 aria-label="Download on the App Store"
+                style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-[50px] w-auto dark:hidden"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
+                  className="dark:hidden"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                 />
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-[50px] w-auto hidden dark:block"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
+                  className="hidden dark:block"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                 />
               </a>
               
