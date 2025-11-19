@@ -28,19 +28,18 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
                 aria-label="Download on the App Store"
-                style={{ height: '60px' }}
               >
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-[60px] w-auto dark:hidden"
-                  style={{ height: '60px', width: 'auto' }}
+                  className="h-[50px] w-auto dark:hidden"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
                 />
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-[60px] w-auto hidden dark:block"
-                  style={{ height: '60px', width: 'auto' }}
+                  className="h-[50px] w-auto hidden dark:block"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
                 />
               </a>
               
@@ -51,13 +50,12 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
                 aria-label="Get it on Google Play"
-                style={{ height: '60px' }}
               >
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
-                  className="h-[60px] w-auto"
-                  style={{ height: '60px', width: 'auto' }}
+                  className="h-[50px] w-auto"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
                 />
               </a>
             </div>

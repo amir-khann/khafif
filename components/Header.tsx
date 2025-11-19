@@ -97,8 +97,9 @@ export default function Header() {
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2 animate-fadeInUp">
+        <div className={`md:hidden mt-4 space-y-2 overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'max-h-96 opacity-100 animate-fadeInUp' : 'max-h-0 opacity-0'
+        }`}>
             <Link 
               href="/" 
               className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
@@ -144,7 +145,6 @@ export default function Header() {
               {language === 'en' ? 'عربي' : 'English'}
             </button>
           </div>
-        )}
       </nav>
     </header>
   )
