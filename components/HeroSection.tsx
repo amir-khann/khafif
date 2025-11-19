@@ -34,7 +34,7 @@ export default function HeroSection() {
               >
                 {theme === 'dark' ? (
                   <img
-                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                     alt="Download on the App Store"
                     style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                   />
@@ -56,31 +56,21 @@ export default function HeroSection() {
                 aria-label="Get it on Google Play"
                 style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
-                {theme === 'dark' ? (
-                  <img
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                    alt="Get it on Google Play"
-                    style={{ 
-                      height: '50px', 
-                      width: 'auto', 
-                      objectFit: 'contain', 
-                      display: 'block',
-                      filter: 'brightness(0) invert(1)',
-                      opacity: 0.9
-                    }}
-                  />
-                ) : (
-                  <img
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                    alt="Get it on Google Play"
-                    style={{ 
-                      height: '50px', 
-                      width: 'auto', 
-                      objectFit: 'contain', 
-                      display: 'block'
-                    }}
-                  />
-                )}
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  style={{ 
+                    height: '50px', 
+                    width: 'auto', 
+                    objectFit: 'contain', 
+                    display: 'block'
+                  }}
+                  onError={(e) => {
+                    // Fallback if the image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://developer.android.com/static/images/badges/en_badge_web_generic.png';
+                  }}
+                />
               </a>
             </div>
           </div>
