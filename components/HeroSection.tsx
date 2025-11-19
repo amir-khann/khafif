@@ -58,15 +58,27 @@ export default function HeroSection() {
               >
                 {theme === 'dark' ? (
                   <img
-                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                     alt="Get it on Google Play"
-                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block', filter: 'brightness(0) invert(1)' }}
+                    style={{ 
+                      height: '50px', 
+                      width: 'auto', 
+                      objectFit: 'contain', 
+                      display: 'block',
+                      filter: 'brightness(0) invert(1)',
+                      opacity: 0.9
+                    }}
                   />
                 ) : (
                   <img
-                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                     alt="Get it on Google Play"
-                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                    style={{ 
+                      height: '50px', 
+                      width: 'auto', 
+                      objectFit: 'contain', 
+                      display: 'block'
+                    }}
                   />
                 )}
               </a>
