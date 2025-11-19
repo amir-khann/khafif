@@ -50,11 +50,11 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
                 aria-label="Get it on Google Play"
+                style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
                 <img
-                  src="https://play.google.com/intl/en_us/badges/images/badge_new.png"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
-                  className="h-[50px] w-auto"
                   style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                 />
               </a>
