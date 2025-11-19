@@ -165,3 +165,9 @@ a {
 .image-overlay:hover::after {
   opacity: 1;
 }
+
+/* Dark mode map filter */
+.dark-map-iframe {
+  filter: brightness(0.6) invert(1) contrast(1.2) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
