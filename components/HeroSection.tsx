@@ -40,7 +40,7 @@ export default function HeroSection() {
                   />
                 ) : (
                   <img
-                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
                     alt="Download on the App Store"
                     style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                   />
