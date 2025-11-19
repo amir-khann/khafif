@@ -57,7 +57,7 @@ export default function HeroSection() {
                 style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
                 <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
                   style={{ 
                     height: '50px', 
@@ -68,7 +68,7 @@ export default function HeroSection() {
                   onError={(e) => {
                     // Fallback if the image fails to load
                     const target = e.target as HTMLImageElement;
-                    target.src = 'https://developer.android.com/static/images/badges/en_badge_web_generic.png';
+                    target.src = 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
                   }}
                 />
               </a>
