@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function MenuSection() {
   const { t } = useTranslation()
@@ -9,37 +10,37 @@ export default function MenuSection() {
   const menuItems = [
     {
       id: 1,
-      image: '/menu1.png',
+      image: getImagePath('/menu1.png'),
       title: t('menu1Title'),
       description: t('menu1Description'),
     },
     {
       id: 2,
-      image: '/menu2.png',
+      image: getImagePath('/menu2.png'),
       title: t('menu2Title'),
       description: t('menu2Description'),
     },
     {
       id: 3,
-      image: '/menu3.png',
+      image: getImagePath('/menu3.png'),
       title: t('menu3Title'),
       description: t('menu3Description'),
     },
     {
       id: 4,
-      image: '/Mocha.png',
+      image: getImagePath('/Mocha.png'),
       title: t('menu4Title'),
       description: t('menu4Description'),
     },
     {
       id: 5,
-      image: '/slush.png',
+      image: getImagePath('/slush.png'),
       title: t('menu5Title'),
       description: t('menu5Description'),
     },
     {
       id: 6,
-      image: '/French Fries.png',
+      image: getImagePath('/French Fries.png'),
       title: t('menu6Title'),
       description: t('menu6Description'),
     },

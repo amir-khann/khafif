@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
+const repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') || 'khafif'
 
-let assetPrefix = ''
-let basePath = ''
-
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') || 'khafif'
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-}
+// Always use basePath for GitHub Pages deployment
+const basePath = isGithubActions ? `/${repo}` : ''
+const assetPrefix = isGithubActions ? `/${repo}/` : ''
 
 const nextConfig = {
   reactStrictMode: true,
@@ -16,10 +12,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  ...(isGithubActions && {
-    assetPrefix: assetPrefix,
-    basePath: basePath,
-  }),
+  basePath: basePath,
+  assetPrefix: assetPrefix,
   trailingSlash: true,
 }
 

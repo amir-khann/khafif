@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -15,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="animate-fadeInUp">
             <Image
-              src="/logo.png"
+              src={getImagePath('/logo.png')}
               alt="Khafif Logo"
               width={120}
               height={60}

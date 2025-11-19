@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function HeroSection() {
   const { t } = useTranslation()
@@ -44,7 +45,7 @@ export default function HeroSection() {
           <div className="relative animate-slideInRight">
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/hero-home-screen.jpeg"
+                src={getImagePath('/hero-home-screen.jpeg')}
                 alt="Hero Image"
                 width={600}
                 height={400}

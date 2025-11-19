@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslation } from '@/contexts/TranslationContext'
 import { useTheme } from '@/contexts/ThemeContext'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +18,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center transform hover:scale-105 transition-smooth">
             <Image
-              src="/logo.png"
+              src={getImagePath('/logo.png')}
               alt="Khafif Logo"
               width={120}
               height={60}
