@@ -52,10 +52,10 @@ export default function HeroSection() {
                 aria-label="Get it on Google Play"
               >
                 <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  src="https://play.google.com/intl/en_us/badges/images/badge_new.png"
                   alt="Get it on Google Play"
                   className="h-[50px] w-auto"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
                 />
               </a>
             </div>
