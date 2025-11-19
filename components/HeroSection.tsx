@@ -56,38 +56,21 @@ export default function HeroSection() {
                 aria-label="Get it on Google Play"
                 style={{ height: '71px', display: 'flex', alignItems: 'center' }}
               >
-                {theme === 'dark' ? (
-                  <img
-                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
-                    alt="Get it on Google Play"
-                    style={{ 
-                      height: '71px', 
-                      width: 'auto', 
-                      objectFit: 'contain', 
-                      display: 'block'
-                    }}
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
-                    }}
-                  />
-                ) : (
-                  <img
-                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
-                    alt="Get it on Google Play"
-                    style={{ 
-                      height: '71px', 
-                      width: 'auto', 
-                      objectFit: 'contain', 
-                      display: 'block',
-                      filter: 'brightness(0) invert(1)'
-                    }}
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
-                    }}
-                  />
-                )}
+                <img
+                  src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  style={{ 
+                    height: '71px', 
+                    width: 'auto', 
+                    objectFit: 'contain', 
+                    display: 'block'
+                  }}
+                  onError={(e) => {
+                    // Fallback if the image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+                  }}
+                />
               </a>
             </div>
           </div>
