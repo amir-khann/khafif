@@ -3,10 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { useTheme } from '@/contexts/ThemeContext'
 import { getImagePath } from '@/utils/imagePath'
 
 export default function HeroSection() {
   const { t } = useTranslation()
+  const { theme } = useTheme()
   
   return (
     <section className="relative min-h-[600px] flex items-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -30,18 +32,19 @@ export default function HeroSection() {
                 aria-label="Download on the App Store"
                 style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
-                <img
-                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
-                  alt="Download on the App Store"
-                  className="dark:hidden"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
-                />
-                <img
-                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
-                  alt="Download on the App Store"
-                  className="hidden dark:block"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
-                />
+                {theme === 'dark' ? (
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
+                    alt="Download on the App Store"
+                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                  />
+                ) : (
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
+                    alt="Download on the App Store"
+                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                  />
+                )}
               </a>
               
               {/* Google Play Badge */}
@@ -53,11 +56,19 @@ export default function HeroSection() {
                 aria-label="Get it on Google Play"
                 style={{ height: '50px', display: 'flex', alignItems: 'center' }}
               >
-                <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  alt="Get it on Google Play"
-                  style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
-                />
+                {theme === 'dark' ? (
+                  <img
+                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play"
+                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block', filter: 'brightness(0) invert(1)' }}
+                  />
+                ) : (
+                  <img
+                    src="https://developer.android.com/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play"
+                    style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                  />
+                )}
               </a>
             </div>
           </div>
