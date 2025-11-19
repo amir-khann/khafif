@@ -23,7 +23,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-4 flex-wrap">
               {/* App Store Badge */}
               <a
-                href="https://apps.apple.com/app/khafif/idYOUR_APP_ID"
+                href="https://apps.apple.com/sa/app/%D8%AE%D9%81%D9%8A%D9%81/id1533527641"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
@@ -45,7 +45,7 @@ export default function HeroSection() {
               
               {/* Google Play Badge */}
               <a
-                href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+                href="https://play.google.com/store/apps/details?id=com.khafif.android&pli=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block transition-smooth transform hover:scale-105"
