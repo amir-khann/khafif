@@ -26,18 +26,18 @@ export default function HeroSection() {
                 href="https://apps.apple.com/app/khafif/idYOUR_APP_ID"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-smooth transform hover:scale-105"
+                className="inline-block transition-smooth transform hover:scale-105 h-[60px]"
                 aria-label="Download on the App Store"
               >
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-14 w-auto dark:hidden"
+                  className="h-full w-auto dark:hidden"
                 />
                 <img
                   src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1609459200"
                   alt="Download on the App Store"
-                  className="h-14 w-auto hidden dark:block"
+                  className="h-full w-auto hidden dark:block"
                 />
               </a>
               
@@ -46,13 +46,13 @@ export default function HeroSection() {
                 href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-smooth transform hover:scale-105"
+                className="inline-block transition-smooth transform hover:scale-105 h-[60px]"
                 aria-label="Get it on Google Play"
               >
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
-                  className="h-14 w-auto"
+                  className="h-full w-auto"
                 />
               </a>
             </div>
