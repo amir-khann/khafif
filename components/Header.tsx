@@ -98,52 +98,56 @@ export default function Header() {
         </div>
 
         <div className={`md:hidden mt-4 space-y-2 overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100 animate-fadeInUp' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-            <Link 
-              href="/" 
-              className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('home')}
-            </Link>
-            <Link 
-              href="/menu" 
-              className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('menu')}
-            </Link>
-            <Link 
-              href="/careers" 
-              className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('careers')}
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('contact')}
-            </Link>
-            <Link 
-              href="/signin" 
-              className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('signIn')}
-            </Link>
-            <button
-              onClick={() => {
-                toggleLanguage()
-                setIsMenuOpen(false)
-              }}
-              className="w-full text-left py-2 px-4 bg-primary-orange text-white rounded-lg hover:bg-orange-600 transition-smooth"
-            >
-              {language === 'en' ? 'عربي' : 'English'}
-            </button>
+            {isMenuOpen && (
+              <>
+                <Link 
+                  href="/" 
+                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('home')}
+                </Link>
+                <Link 
+                  href="/menu" 
+                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('menu')}
+                </Link>
+                <Link 
+                  href="/careers" 
+                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('careers')}
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('contact')}
+                </Link>
+                <Link 
+                  href="/signin" 
+                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('signIn')}
+                </Link>
+                <button
+                  onClick={() => {
+                    toggleLanguage()
+                    setIsMenuOpen(false)
+                  }}
+                  className="w-full text-left py-2 px-4 bg-primary-orange text-white rounded-lg hover:bg-orange-600 transition-smooth"
+                >
+                  {language === 'en' ? 'عربي' : 'English'}
+                </button>
+              </>
+            )}
           </div>
       </nav>
     </header>
