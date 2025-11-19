@@ -26,7 +26,7 @@ export default function Header() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-6 space-x-reverse">
+          <div className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary-orange transition-smooth relative group">
               {t('home')}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-orange transition-all duration-300 group-hover:w-full"></span>
